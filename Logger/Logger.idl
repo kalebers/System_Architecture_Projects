@@ -1,0 +1,23 @@
+//
+// Interface Logger
+//
+//   PUCPR Ciencia da Computação
+//   Kalebe Rodrigues Szlachta
+//
+// Compilar com:
+//
+//     tao_idl -Gstl Logger.idl
+//
+// para gerar stub e skeleton.
+//
+
+enum ErrorType {DEBUG,WARNING,ERROR,CRITICAL};
+
+interface Logger {
+
+	// atributos
+	attribute boolean verbose;
+	
+	// métodos
+	void log(in ErrorType prioridade, in string endereco, in unsigned short pid, in unsigned long hora, in string mensagem);
+};
